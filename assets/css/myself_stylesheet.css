@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    background-image: url('../images/wacca_fish.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    height: 250px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.banner a {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FDEFD5;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Inner layout for sidebar + main */
+.layout {
+    display: flex;
+    gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: sticky;
+    top: 20px;
+    width: 220px;
+    background-color: #5777ce;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+}
+
+.sidebar a, .sidebar button {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 220px; /* same as sidebar */
+    flex-shrink: 0;
+}
+
+.dropdown-content {
+    display: none;
+    margin-left: 10px;
+}
+
+.dropdown-content a {
+    font-size: 14px;
+}
+
+.sidebar button.active + .dropdown-content {
+    display: block;
+}
+
+.sidebar-below-box {
+    background-color: #43235e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 0.95rem;
+    color: white;
+    width: 100%; /* inherit sidebar width */
+    overflow: hidden; /* prevent stretching */
+}
+
+.sidebar-below-box iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Main content */
+.main {
+    flex: 1;
+    max-width: 700px;
+}
+
+.box {
+    background-color: rgb(150, 118, 84);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.box h3 {
+    margin-bottom: 12px;
+    font-family: 'Merriweather', serif;
+}
+
+@media (max-width: 768px) {
+    .container {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .sidebar,
+    .main {
+    width: 100%;
+    max-width: 100%;
+    }
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-title {
+  font-weight: bold;
+}
+
+.post-date {
+  font-style: italic;
+  opacity: 0.9;
+}
