@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../assets/fonts/JetBrainsMono.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('../images/scifi_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+#wrapper {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+#wrapper h1 {
+    font-size: 8vw;
+    margin: 0;
+    line-height: 1;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button-row {
+    display: flex;
+    gap: 3.5rem;
+    justify-content: center;
+    margin-top: 8rem;
+    flex-wrap: wrap;
+}
+
+.button {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: transparent;
+    border: 3px solid;
+    border-radius: 8px;
+    padding: 1.25rem 3rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:nth-child(1) {
+    --btn-color: 255, 0, 0;
+    border-color: rgb(var(--btn-color));
+    color: rgb(var(--btn-color));
+}
+.button:nth-child(1):hover {
+    background-color: rgba(var(--btn-color), 0.2);
+}
+
+.button:nth-child(2) {
+    --btn-color: 255, 127, 0;
+    border-color: rgb(var(--btn-color));
+    color: rgb(var(--btn-color));
+}
+.button:nth-child(2):hover {
+    background-color: rgba(var(--btn-color), 0.2);
+}
+
+.button:nth-child(3) {
+    --btn-color: 255, 255, 0;
+    border-color: rgb(var(--btn-color));
+    color: rgb(var(--btn-color));
+}
+.button:nth-child(3):hover {
+    background-color: rgba(var(--btn-color), 0.2);
+}
+
+.button:nth-child(4) {
+    --btn-color: 0, 255, 0;
+    border-color: rgb(var(--btn-color));
+    color: rgb(var(--btn-color));
+}
+.button:nth-child(4):hover {
+    background-color: rgba(var(--btn-color), 0.2);
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80);
+    background-size: 600% 600%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
